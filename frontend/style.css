@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plain Light";
+  color: #fff;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+@font-face {
+  font-family: "Plain Light";
+  src: url("/fonts/plain-light-webfont.woff") format("woff"),
+    url("/fonts/plain-light-webfont.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Plain Regular";
+  src: url("/fonts/plain-regular-webfont.woff") format("woff"),
+    url("/fonts/plain-regular-webfont.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Silk Serif Light Italic";
+  src: url("/fonts/silkserif-lightitalic-webfont.woff") format("woff"),
+    url("/fonts/silkserif-lightitalic-webfont.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Silk Serif Regular";
+  src: url("/fonts/silkserif-regular-webfont.woff") format("woff"),
+    url("/fonts/silkserif-regular-webfont.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+#main {
+  position: relative;
+  background-color: #111;
+}
+
+#loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: #0b0b0b;
+  padding: 20vh 10vw;
+}
+.line {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4vw;
+  height: fit-content;
+}
+
+#line1-part1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5vw;
+  margin-left: 3vw;
+}
+#line1-part1 h5,
+#line1-part1 h6 {
+  font-weight: 100;
+  font-family: "Silk Serif Light Italic";
+  font-size: 3vw;
+}
+.line h1 {
+  font-size: 6.5vw;
+  text-transform: uppercase;
+}
+.line h2 {
+  font-size: 6.5vw;
+  text-transform: uppercase;
+}
+
+#page1 {
+  height: 100vh;
+  width: 100%;
+  background-color: #151515;
+}
+#line1-part1 h5 {
+  width: 5vw;
+  text-align: right;
+}
