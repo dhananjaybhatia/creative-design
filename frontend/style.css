@@ -46,7 +46,7 @@ body {
 
 #main {
   position: relative;
-  background-color: #111;
+  background-color: #030303;
 }
 
 #loader {
@@ -55,14 +55,7 @@ body {
   height: 100%;
   z-index: 999;
   background-color: #0b0b0b;
-  padding: 20vh 10vw;
-}
-.line {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 4vw;
-  height: fit-content;
+  padding: 20vh 5vw;
 }
 
 #line1-part1 {
@@ -76,15 +69,7 @@ body {
 #line1-part1 h6 {
   font-weight: 100;
   font-family: "Silk Serif Light Italic";
-  font-size: 3vw;
-}
-.line h1 {
-  font-size: 6.5vw;
-  text-transform: uppercase;
-}
-.line h2 {
-  font-size: 6.5vw;
-  text-transform: uppercase;
+  font-size: 2.8vw;
 }
 
 #page1 {
@@ -95,4 +80,62 @@ body {
 #line1-part1 h5 {
   width: 5vw;
   text-align: right;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.2vw;
+  height: fit-content;
+  position: relative;
+}
+
+.line h1 {
+  font-size: 6.5vw;
+  text-transform: uppercase;
+}
+
+.line h2 {
+  font-size: 6.5vw;
+  position: absolute; /* Makes it independent from h1 */
+  left: 65%;
+  text-transform: uppercase;
+  animation-name: anime;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; /* Ensures a smooth loop */
+}
+
+@keyframes anime {
+  /* 0% {
+    font-family: "Plain Light";
+    -webkit-text-stroke: 1px #fff;
+    color: #fff;
+    font-weight: 500;
+    opacity: 0;
+  } */
+
+  0% {
+    font-family: "Silk Serif Light Italic";
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 500;
+    opacity: 1;
+  }
+  50% {
+    font-family: "Plain Light";
+    -webkit-text-stroke: 1px #fff;
+    color: #fff;
+    font-weight: 500;
+    opacity: 1;
+  }
+  100% {
+    font-family: "Silk Serif Light Italic"; /* Switch back smoothly */
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 500;
+    opacity: 1;
+  }
 }
