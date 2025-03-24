@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
+    <div id="crsr"></div>
     <div id="loader">
       <div class="line">
         <div id="line1-part1">
@@ -26,7 +28,62 @@
     </div>
 
     <div id="main">
-      <div id="page1"></div>
+      <div id="page1">
+        <div id="nav">
+          <svg
+            width="200"
+            height="100"
+            viewBox="0 0 200 100"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <!-- Letter C -->
+            <path
+              d="M60,30 Q35,50 60,70"
+              stroke="white"
+              stroke-width="8"
+              fill="none"
+              stroke-linecap="round"
+            />
+
+            <!-- Letter D with a Stylish Cut -->
+            <path
+              d="M80,30 L110,30 Q130,50 110,70 L80,70"
+              stroke="white"
+              stroke-width="8"
+              fill="none"
+              stroke-linecap="round"
+            />
+
+            <!-- Horizontal Line for a Premium Look -->
+            <line
+              x1="80"
+              y1="50"
+              x2="110"
+              y2="50"
+              stroke="white"
+              stroke-width="8"
+            />
+          </svg>
+          <div id="nav-part2">
+            <h4>About</h4>
+            <h4>Work</h4>
+            <h4>Contacts</h4>
+          </div>
+        </div>
+        <div class="hero" id="hero1">
+          <h1>We Design</h1>
+        </div>
+        <div class="hero" id="hero2">
+          <h1>Unique</h1>
+        </div>
+        <div class="hero" id="hero3">
+          <h2>Web <span class="no-hover">/</span></h2>
+          <h2>Graphic</h2>
+        </div>
+        <div class="hero" id="hero4">
+          <h1>Experience</h1>
+        </div>
+      </div>
       <div id="page2"></div>
       <div id="page3"></div>
       <div id="page4"></div>
@@ -44,6 +101,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/sheryjs/dist/Shery.js"
+    ></script>
+
     <script src="script.js"></script>
   </body>
 </html>
