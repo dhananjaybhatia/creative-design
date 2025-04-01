@@ -45,8 +45,12 @@ function loadingAnimation() {
   });
   tl.from(".hero h1, #hero3 h2", {
     y: 150,
+    opacity: 0,
     stagger: 0.2,
+    duration: 1,
+    ease: "power4.out"
   });
+  
   tl.from("#nav", {
     opacity: 0,
   });
