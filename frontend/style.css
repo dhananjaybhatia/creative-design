@@ -11,6 +11,7 @@ body {
   width: 100%;
   height: 100%;
 }
+
 ::selection {
   background-color: #f27059;
   color: black; /* Optional: makes the text readable */
@@ -172,6 +173,7 @@ body {
   position: relative;
   z-index: 999;
   display: flex;
+  overflow: visible;
 }
 .hero:nth-child(2) {
   margin-top: 10vh;
@@ -183,6 +185,20 @@ body {
   text-transform: uppercase;
   line-height: 6.5vw;
 }
+
+#hero1 h1 {
+  position: relative;
+}
+
+#hero1 h1::before {
+  content: "01";
+  position: absolute;
+  font-size: 3vw;
+  top: -1vw;
+  left: -6vw;
+  font-family: "Silk Serif Light Italic";
+}
+
 .hero h2 {
   padding-bottom: 0.8vw;
   position: relative;
@@ -206,7 +222,10 @@ body {
   position: relative;
   z-index: 1;
   background-color: #151515;
-  padding: 0 0.1vw;
+  padding: 0.1vw 0.1vw;
+  font-size: 7vw;
+  transform: translateY(0.1vw);
+  display: inline-block;
 }
 .hero h2:hover {
   -webkit-text-stroke: 2px #fff;
@@ -275,7 +294,10 @@ body {
   width: 100%;
   position: relative;
   padding-top: 5vh;
-  /* background-color: red; */
+  background-color: #151515;
+}
+#page4 {
+  margin-bottom: -9.48vh;
 }
 
 #page4-content {
@@ -288,6 +310,16 @@ body {
   font-family: "Plain Regular";
   font-weight: 500;
   text-transform: uppercase;
+  position: relative;
+}
+
+#page4-content h1::before {
+  content: "03";
+  position: absolute;
+  font-size: 3vw;
+  top: 0.5vw;
+  left: -7vw;
+  font-family: "Silk Serif Light Italic";
 }
 
 #page4-content .line {
@@ -339,7 +371,7 @@ body {
   font-weight: 500;
 }
 
-.blue-div-elem p{
+.blue-div-elem p {
   width: 40%;
   font-size: 0.7vw;
 }
@@ -347,7 +379,121 @@ body {
 #page5 {
   min-height: 100vh;
   width: 100%;
-  padding: 5vh 0;
-  background-color: #151515;
   position: relative;
+  background-color: #151515;
+}
+
+.elem {
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0 2vw;
+  /* scroll-behavior: smooth; */
+}
+
+.elem h1 {
+  font-size: 5vw;
+  font-family: "Silk Serif Light Italic";
+  font-weight: 500;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+  display: inline-block;
+  margin-right: 16px;
+  animation-name: anime2;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes anime2 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 20px));
+  }
+}
+
+.elem2 {
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0 2vw;
+  /* scroll-behavior: smooth; */
+}
+
+.elem2 h1 {
+  font-size: 5vw;
+  font-family: "Plain Light";
+  font-weight: 500;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+  display: inline-block;
+  margin-right: 16px;
+  animation-name: anime2;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: reverse; // either you make new keyframes or just use anime2 with direction-reverse
+}
+
+/* @keyframes anime3 {
+  to {
+    transform: translateX(0);
+  }
+  from {
+    transform: translateX(calc(-100% - 20px));
+  }
+} */
+
+#footer {
+  height: 90vh;
+  width: 100%;
+  position: relative;
+  padding-left: 28vw;
+  background-color: #151515;
+}
+#footer h1 {
+  font-size: 5.5vw;
+  font-family: "Plain Regular";
+  font-weight: 500;
+  width: 60vw;
+  text-transform: uppercase;
+  position: relative;
+}
+#footer h1::before {
+  content: "04";
+  position: absolute;
+  font-size: 3vw;
+  top: 0.5vw;
+  left: -7vw;
+  font-family: "Silk Serif Light Italic";
+}
+#footer .line {
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  margin: 2vw 0;
+}
+
+#footer-div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-right: 15vw;
+  padding-top: 3.5vw;
+  margin-bottom: 14vw;
+}
+
+#footer-div h6 {
+  font-size: 0.7vw;
+  margin-bottom: 1vw;
+  font-family: "Plain Regular";
+  font-weight: 500;
+}
+#footer-div h5 {
+  font-size: 1vw;
+  font-family: "Plain Light";
 }
