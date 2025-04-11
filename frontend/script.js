@@ -80,19 +80,24 @@ function loadingAnimation() {
     ease: Power4,
   });
 
-  // tl.to("#loader", {
-  //   display: "none",
-  // });
   tl.to("#loader", {
     display: "none",
   });
-  tl.from(".hero h1, #hero3 h2", {
+  tl.from(".hero h1, #hero2 h1, #hero3 h2, #hero4 h1", {
     y: 150,
     opacity: 0,
     stagger: 0.2,
     duration: 1,
     ease: "power4.out",
   });
+
+  tl.from(
+    "#page2",
+    {
+      opacity: 0,
+    },
+    "-=1"
+  );
 
   tl.from("#nav", {
     opacity: 0,
@@ -101,7 +106,6 @@ function loadingAnimation() {
 
 function cursorAnimation() {
   document.addEventListener("mousemove", function (debts) {
-    console.log(debts.x);
     gsap.to("#crsr", {
       left: debts.x,
       top: debts.y,
@@ -110,6 +114,6 @@ function cursorAnimation() {
 
   Shery.makeMagnet("#nav-part2 h4", {});
 }
+locomotiveAnimation();
 loadingAnimation();
 // cursorAnimation();
-locomotiveAnimation();
