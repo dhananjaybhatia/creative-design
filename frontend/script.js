@@ -268,10 +268,6 @@ function cursorAnimation() {
     });
 
   });
-
-  
-
-  
 }
 
 function sheryAnimation() {
@@ -283,8 +279,86 @@ function sheryAnimation() {
   });
 }
 
+function flagAnimation() {
+  const flag = document.querySelector("#flag");
+  const hero3 = document.querySelector("#hero3");
+  const mainCursor = document.querySelector("#crsr");
+
+  let mouseX = 0;
+  let mouseY = 0;
+  let posX = 0;
+  let posY = 0;
+  let lastX = 0;
+  let rotation = 0;
+  let skewX = 0;
+
+  // On enter — place + fade + pop
+  hero3.addEventListener("mouseenter", (e) => {
+    mouseX = e.clientX - 50;
+    mouseY = e.clientY - 50;
+    posX = mouseX;
+    posY = mouseY;
+
+    gsap.to(mainCursor, {
+      opacity:0
+    })
+    gsap.set(flag, {
+      x: posX,
+      y: posY,
+      scale: 0.8,
+      rotation: 0,
+      skewX: 0
+    });
+
+    gsap.to(flag, {
+      opacity: 1,
+      scale: 1,
+      duration: 0.4,
+      ease: "back.out(1.7)"
+    });
+  });
+
+  // On move — update target and curve values
+  hero3.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX - 50;
+    mouseY = e.clientY - 50;
+
+    const dx = mouseX - lastX;
+    rotation = gsap.utils.clamp(-8, 8, dx * 0.3); // subtle rotation
+    skewX = gsap.utils.clamp(-10, 10, dx * 0.6);   // flag pull curve
+    lastX = mouseX;
+  });
+
+  // On leave — fade + shrink
+  hero3.addEventListener("mouseleave", () => {
+    gsap.to(mainCursor, {
+      opacity:1
+    })
+    gsap.to(flag, {
+      opacity: 0,
+      scale: 0.8,
+      duration: 0.4,
+      ease: "power2.inOut"
+    });
+  });
+
+  // Animate smoothly
+  gsap.ticker.add(() => {
+    posX += (mouseX - posX) * 0.1;
+    posY += (mouseY - posY) * 0.1;
+
+    gsap.set(flag, {
+      x: posX,
+      y: posY,
+      rotation: rotation,
+      skewX: skewX
+    });
+  });
+}
+
 
 locomotiveAnimation();
 loadingAnimation();
 cursorAnimation();
 sheryAnimation();
+flagAnimation()
