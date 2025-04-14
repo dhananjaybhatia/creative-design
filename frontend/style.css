@@ -349,6 +349,7 @@ body {
   margin-right: 10vw;
   position: relative;
 }
+
 .page3-circle2 svg{
   height: 30%;
   rotate: -45deg;
@@ -399,8 +400,8 @@ body {
     scale: 0;
     transition: all ease 0.5s;
     border-radius: 50%;
-    
   }
+
   .circle-text p{
     font-size: 0.9vw;
     font-weight: 500;
@@ -422,6 +423,7 @@ body {
   .page3-circle2:hover p{
     scale: 1;
   }
+  
   
 
 #page4 {
@@ -529,8 +531,8 @@ body {
   min-height: 100vh;
   width: 100%;
   position: relative;
-  /* padding-top: 3vh; */
   background-color: #151515;
+ 
 }
 
 .elem {
@@ -616,8 +618,8 @@ body {
   width: 100%;
   position: relative;
   padding-left: 28vw;
-  background-color: #151515;
-}
+  /* background-color: #151515; */
+background-color: green;}
 #footer h1 {
   font-size: 5.5vw;
   font-family: "Plain Regular";
@@ -665,13 +667,6 @@ body {
   z-index: 99999 !important;
   pointer-events: none;
 }
-
-/* #flag{
-  height: 22vw;
-  position:absolute;
-  top: 0;
-  left: 0;
-} */
 
 #flag {
   height: 25vw;
