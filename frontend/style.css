@@ -618,8 +618,9 @@ body {
   width: 100%;
   position: relative;
   padding-left: 28vw;
-  /* background-color: #151515; */
-background-color: green;}
+  background-color: #151515;
+}
+
 #footer h1 {
   font-size: 5.5vw;
   font-family: "Plain Regular";

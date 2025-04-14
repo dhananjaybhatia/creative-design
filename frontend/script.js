@@ -363,16 +363,14 @@ function textAnimate() {
   // Step 2: Initialize textillate once
   $text.textillate({
     autoStart: true,
-    in: { effect: 'fadeInLeftBig', sequence: true },
+    in: { effect: 'fadeInLeftBig', sequence: true}
   });
 
   // Step 3: Trigger animation only when user hovers on footer
   footer.addEventListener("mouseenter", () => {
     $text.textillate('stop').textillate('in');
   });
-
 }
-
 
 locomotiveAnimation();
 loadingAnimation();
